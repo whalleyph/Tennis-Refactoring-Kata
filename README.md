@@ -32,3 +32,9 @@
 - Initialising temp score to 0 was redundant as it gets reassigned.
 - Moved the if else statement in the for loops to be multiple lines with curly braces, so it is easier to understand the purpose of it.
 - Made sure opening curly braces came right after for loop statement and if/else statements instead of on the next line.
+
+## Summary
+
+I worked on game for less time, but I overall found the code more confusing and struggled to make it less so without 
+really changing the structure of the code so much it was unrecognisable. I think that the code for game 3 is more suitable
+but still not perfect.
