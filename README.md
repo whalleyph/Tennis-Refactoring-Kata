@@ -18,3 +18,17 @@
 - Used .equals() for strings as we care that they have equal value, and we don’t care if they reference the same thing.
 - Made the if else statement into an if-else-if statement as we don’t want to increase player 2’s score if we get other values such as undefined.
 - This function only allowed the player’s to be called player1 and player2 when they should be whatever the p1N and p2N variable calls them.
+
+## Tennis Game 1
+### General:
+
+- Made name variables final for the same reason
+- Used .equals() to compare strings for the same reason
+- This code also hard codes the player names being “player1” and “player2” so I put in the playerName variable.
+- String builder has better performance than string concatenation in a loop
+- Changed m_score1 and m_score2 to player1Score and player2Score, so it is clearer what they mean.
+- First switch statement replaced with enhanced switch statement as it is neater and takes up fewer lines.
+- Added spaces between variables and mathematical operators as it makes the code more readable.
+- Initialising temp score to 0 was redundant as it gets reassigned.
+- Moved the if else statement in the for loops to be multiple lines with curly braces, so it is easier to understand the purpose of it.
+- Made sure opening curly braces came right after for loop statement and if/else statements instead of on the next line.
