@@ -35,6 +35,6 @@
 
 ## Summary
 
-I worked on game for less time, but I overall found the code more confusing and struggled to make it less so without 
+I worked on game 1 for less time, but I overall found the code more confusing and struggled to make it less so without 
 really changing the structure of the code so much it was unrecognisable. I think that the code for game 3 is more suitable
 but still not perfect.
