@@ -1,35 +1,19 @@
-Paul initial edit
-_Support this and all my katas via [Patreon](https://www.patreon.com/EmilyBache)_
-
-# Tennis Refactoring Kata
-
-You can find out more about this exercise and where it comes from in [this YouTube video](https://youtu.be/XifUs1FhWRc). There are also some Guided Learning Hour videos that include demos of me solving parts of it.
-
-* [Refactoring: What you need to know](https://youtu.be/K7xSsNpeM8I) - includes demo of TennisGame3 in C#
-* [Refactoring Skills: Extract Function](https://youtu.be/lOAktlPd8uk) - includes demo of TennisGame6 in C#
-
-# The Scenario
-
-Imagine you work for a consultancy company, and one of your colleagues has been doing some work for the Tennis Society. The contract is for 10 hours billable work, and your colleague has spent 8.5 hours working on it. Unfortunately he has now fallen ill. He says he has completed the work, and the tests all pass. Your boss has asked you to take over from him. She wants you to spend an hour or so on the code so she can bill the client for the full 10 hours. She instructs you to tidy up the code a little and perhaps make some notes so you can give your colleague some feedback on his chosen design. You should also prepare to talk to your boss about the value of this refactoring work, over and above the extra billable hours.
-
-There are several versions of this refactoring kata, each with their own design smells and challenges. I suggest you start with the first one, with the class "TennisGame1". The test suite provided is fairly comprehensive, and fast to run. You should not need to change the tests, only run them often as you refactor.
-
-There is a deliberate error in several of the implementations - the player names are hard-coded to "player1" and "player2". After you refactor, you may want to fix this problem and add suitable test cases to prove your fix works.
-
-If you like this Kata, you may be interested in [my books](https://leanpub.com/u/emilybache) and website [SammanCoaching.org](https://sammancoaching.org)
-
-## Kata Description
-
-Here is a description of the problem this code is designed to solve: [Tennis Kata](https://sammancoaching.org/kata_descriptions/tennis.html).
-
-## Questions to discuss afterwards
-
-* How did it feel to work with such fast, comprehensive tests?
-* Did you make mistakes while refactoring that were caught by the tests?
-* If you used a tool to record your test runs, review it. Could you have taken smaller steps? Made fewer refactoring mistakes?
-* Did you ever make any refactoring mistakes and then back out your changes? How did it feel to throw away code?
-* What would you say to your colleague if they had written this code?
-* What would you say to your boss about the value of this refactoring work? Was there more reason to do it over and above the extra billable hour or so?
-
-## Code Reading Practice
-Test your code reading skills. Here is a description of what to do: [Scanning for Code Smells](https://sammancoaching.org/exercises/code_reading.html). There are suitable lists of urls to open in some of the language subdirectories.
+### Notes on Changes
+## Tennis Game 3
+# General:
+<ul>
+    <li> Change p1 and p2 variables to playerOneScore and playerTwoScore as it makes the code easier to read and understand </li>
+    Rename p1N and p2N variables to playerOneName and playerTwoName, so it is clearer what the variable mean and the variables have been made final as they do not change.
+    changed variable s to be playerOneScoreAsString to make it clearer what it means.
+    changed the variable p to be arrayOfScoreNames, so it is clearer what it means.
+    Added playerTwoScoreAsString variable for consistency, and it makes the line of code where it is used more readable.
+    If and else did not have curly brackets marking, which statements fall under them, which can be misleading.
+    There is an else statement directly into an if statement. This could be collapsed into an if statement. The statement after this should be in an else statement for clarity.
+    The s string had multiple was used to for playerOne’s score and is later used again to be either “player1” and “player2” in the case of advantage or a win. The variable having multiple purposes is confusing so I have made a new String variable called playerNameWithHigherScore.
+    With the check to see if it is advantage I changed it from a long multiplication to a Math.pow to make it clearer what is being done (making the difference positive) and it to make the code shorter/simpler.
+    Moved arrayOfScoreNames to start with other variable declarations, so they are grouped in a neater format.
+</ul>
+# wonPoint function:
+Used .equals() for strings as we care that they have equal value, and we don’t care if they reference the same thing.
+Made the if else statement into an if-else-if statement as we don’t want to increase player 2’s score if we get other values such as undefined.
+This function only allowed the player’s to be called player1 and player2 when they should be whatever the p1N and p2N variable calls them.
